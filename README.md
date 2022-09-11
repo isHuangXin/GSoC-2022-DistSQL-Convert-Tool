@@ -127,3 +127,29 @@ Includes PRs and Issues related to GSoC project
 
 ## Result
 Intended Goals were met during the standard coding period, DistSQL Convert for the Yaml files were achieved.
+
+- Example: the yaml file needs to be converted
+<div align="center">
+    <img src="./pictures/Yaml-file.png" width=70% alt="workflow">
+    <p><i>Yaml File</i></p>
+</div><br>
+
+- Example: the converted DistSQL script
+<div align="center">
+    <img src="./pictures/Converted-DistSQL.png" width=80% alt="workflow">
+    <p><i>Converted DistSQL</i></p>
+</div><br>
+
+## Future Scope
+Now that the project of Developing an external tool to convert YAML configuration into DistSQL scripts is completed. Next, I will focus on refactoring the [ConvertYamlConfiguration.java](https://github.com/apache/shardingsphere/blob/master/shardingsphere-proxy/shardingsphere-proxy-backend/src/main/java/org/apache/shardingsphere/proxy/backend/handler/distsql/ral/queryable/ConvertYamlConfigurationHandler.java) to achieve [the mixed configuration of DistSQL](https://shardingsphere.apache.org/document/current/cn/user-manual/shardingsphere-jdbc/yaml-config/rules/mix/).
+
+## Acknowledgement
+The past 3 months have challenged me to learn and grow. I had a fruitful summer coding and interacting with the Apache ShardingSphere community. This experience made me interested in open source projects, and I will continue contributing solutions and code to the shardingsphere via participating in [WeOpen-Star 2022](https://github.com/weopenprojects/WeOpen-Star/issues/51) (by Tencent).
+
+And finally, I also would like to show my gratitude to my mentor [Raigor Jiang](https://github.com/RaigorJiang) for guiding me throughout this journey and Google for organizing such a beneficial program.
+
+## Additional Links
+- [GSoC 2022 Proposal Link](https://summerofcode.withgoogle.com/programs/2022/projects/4PnSweAf1)
+- [Github Issues](https://github.com/apache/shardingsphere/issues/17939)
+- [Slack Workspace](https://app.slack.com/client/T026JKU2DPF/C026MLH7F34)
+  
