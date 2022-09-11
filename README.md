@@ -36,10 +36,94 @@ user to enter a path to a YAML configuration file and output a DistSQL script.</
 ## Goals
 Develop an external tool to convert YAML configuration into DistSQL scripts. I have built a prototype for this proposal: DistSQL RDL, e.g.ADD and CREATE.It has the function of reading YAML files, parsing the content, and then using DistSQL RDL commands to output DistSQL scripts.
 
-
-
 <div align="center">
     <img src="./pictures/DistSQL-convert-prototype.png" width=80% alt="ShardingSphere logo">
     <p><i>A pototype of converting Yaml file to DistSQL script.</i></p>
 </div><br>
 
+All the DistSQL convert functions and test cases I need to finish.
+<br><br>
+<table align="center">
+<tr>
+<td><b>ADD RESOURCE DATASOURCE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING TABLE RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING BINDING TABLE RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING BROADCAST TABLE RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING ALGORITHM</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING STRATEGY</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHARDING KEY GENERATOR</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE READWRITE_SPLITTING RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE DB_DISCOVERY RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE ENCRYPT RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+<tr>
+<td><b>CREATE SHADOW RULE</b></td>
+<td><b>TEST CASE</b></td>
+</tr>
+</table>
+<br>
+
+## Approach and Workflow
+- Reading the yaml file, parsing its content and outputing the DistSQL RDL script,
+e.g. ADD, Create.
+- Wrap DistSQL RDL syntax into a command-line tool ([ConvertYamlConfigurationHandler]()). This allows converting yaml to DistSQL without starting Proxy
+- Add new corresponding Yaml files in [Convert folder](https://github.com/apache/shardingsphere/tree/master/shardingsphere-proxy/shardingsphere-proxy-backend/src/test/resources/conf/convert) and expected converted DistSQL in [Expected floder](https://github.com/apache/shardingsphere/tree/master/shardingsphere-proxy/shardingsphere-proxy-backend/src/test/resources/expected).
+- Run [ConvertYamlConfigurationHandlerTest](https://github.com/apache/shardingsphere/tree/master/shardingsphere-proxy/shardingsphere-proxy-backend/src/test/java/org/apache/shardingsphere/proxy/backend/handler/distsql/ral/queryable) to make sure there are no exceptions.
+
+<div align="center">
+    <img src="./pictures/Approach-and-Workflow.png" width=70% alt="workflow">
+    <p><i>DistSQL Convert Process</i></p>
+</div><br>
+
+## Pull Requests and Issues
+
+### Community Bonding period 
+Includes Community Issues and PRs.
+* ⊙ [#16915](https://github.com/apache/shardingsphere/discussions/16915): Issues: Apply for this project in Discussions
+
+### Coding Period
+Includes PRs and Issues related to GSoC project
+* ⊙ [#17939](https://github.com/apache/shardingsphere/issues/17939): [ GSoC 2022 ] Develop an external tool to convert YAML configuration into DistSQL scripts
+* ✔ [#19280](https://github.com/apache/shardingsphere/pull/19280): Support `ADD RESOURCE DATASOURCE` DistSQL Convert
+* ✔ [#19509](https://github.com/apache/shardingsphere/pull/19509): Support `CREATE SHARDING TABLE RULE` DistSQL Convert
+* ✔ [#19509](https://github.com/apache/shardingsphere/pull/19509): Support `CREATE SHARDING BINDING TABLE RULE` DistSQL Convert
+* ✔ [#20843](https://github.com/apache/shardingsphere/pull/20843): Support `CREATE SHARDING BROADCAST TABLE RULE` DistSQL Convert
+* ✔ [#19509](https://github.com/apache/shardingsphere/pull/19509): Support `CREATE SHARDING ALGORITHM` DistSQL Convert
+* ✔ [#19509](https://github.com/apache/shardingsphere/pull/19509): Support `CREATE SHARDING STRATEGY` DistSQL Convert
+* ✔ [#19509](https://github.com/apache/shardingsphere/pull/19509): Support `CREATE SHARDING KEY GENERATOR` DistSQL Convert
+* ✔ [#20648](https://github.com/apache/shardingsphere/pull/20648): Support `CREATE READWRITE_SPLITTING RULE` DistSQL Convert
+* ✔ [#20707](https://github.com/apache/shardingsphere/pull/20707): Support `CREATE DB_DISCOVERY RULE` DistSQL Convert
+* ✔ [#20748](https://github.com/apache/shardingsphere/pull/20748): Support `CREATE ENCRYPT RULE` DistSQL Convert
+* ✔ [#20843](https://github.com/apache/shardingsphere/pull/20843): Support `CREATE SHADOW RULE` DistSQL Convert
+
+
+## Result
+Intended Goals were met during the standard coding period, DistSQL Convert for the Yaml files were achieved.
