@@ -31,8 +31,6 @@ user to enter a path to a YAML configuration file and output a DistSQL script.</
 
 </p>More details:</p> 
 
-<a href="https://summerofcode.withgoogle.com/programs/2022/projects/4PnSweAf">https://summerofcode.withgoogle.com/programs/2022/projects/4PnSweAf</a>
-
 <a href="https://shardingsphere.apache.org/document/current/en/reference/distsql/syntax/rdl/resource-definition/add-resource/">https://shardingsphere.apache.org/document/current/en/reference/distsql/syntax/rdl/resource-definition/add-resource/</a>
 
 ## Goals
@@ -42,6 +40,6 @@ Develop an external tool to convert YAML configuration into DistSQL scripts. I h
 
 <div align="center">
     <img src="./pictures/DistSQL-convert-prototype.png" width=80% alt="ShardingSphere logo">
-    <p><i>A rototype of converting Yaml file to DistSQL script.</i></p>
+    <p><i>A pototype of converting Yaml file to DistSQL script.</i></p>
 </div><br>
 
